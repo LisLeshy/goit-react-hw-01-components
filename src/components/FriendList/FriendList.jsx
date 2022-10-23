@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 // import { getRandomHexColor } from 'utils/getRandomColor ';
 export const FriendList = ({ friends }) => {
-    console.log({friends});
+    // console.log({friends});
     return <ul className="friendList">{friends.map((item)=>
         <li className="item" key={item.id}>
             <span className="status">{item.isOnline}</span>
