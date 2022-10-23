@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
+import css from './FriendList.module.css';
 // import { getRandomHexColor } from 'utils/getRandomColor ';
 export const FriendList = ({ friends }) => {
     // console.log({friends});
-    return <ul className="friendList">{friends.map((item)=>
-        <li className="item" key={item.id}>
-            <span className="status">{item.isOnline}</span>
-            <img className="avatar" src={item.avatar} alt={item.name} width="48" />
-            <p className="name">{item.name}</p>
+    return <ul className={css.friendList}>{friends.map((item)=>
+        <li className={css.item} key={item.id}>
+            <span className={css.status}><div className={item.isOnline ? css.onLine : css.offLine}></div></span>
+            <img className={css.avatar} src={item.avatar} alt={item.name} width="48" />
+            <p className={css.name}>{item.name}</p>
         </li>)}
 </ul>
 }
